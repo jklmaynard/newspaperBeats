@@ -14,8 +14,16 @@
   <h3 ng-show="beat.reporters.length && !filtered.length">Nothing Matches!</h3>
   <ul ng-repeat="item in filtered = (beat.reporters | filter:query)">
     <li>
-      {{item.name}}
-      <button class="btn- btn-sm" ng-click="showAll = true" ng-hide="showAll">Profile</button>
+      <span ng-click="showAll = true" ng-hide="showAll">
+        {{item.name}}
+      </span>
+      <button ng-click="editing = true" ng-hide="editing; showAll" class="btn btn-sm">Edit</button>
+      <form ng-submit="editReporter(item.id); editing = false" ng-show="editing" class="form-inline">
+        <input type="text" ng-model="reporterTitle" placeholder="Title">
+        <input type="number" ng-model="reporterTenure" placeholder="Years On Beat">
+        <input type="text" ng-model="reporterAwards" placeholder="Accolades">
+        <button type="submit" class="btn btn-sm">Save</button>
+      </form>
       <span class="form-group" ng-show="showAll">
         <ul>
             <li> Title: {{ item.title }} </li>
@@ -33,9 +41,6 @@
   <form ng-submit="addReporter()" class="form-inline">
     <div class="form-group">
       <input type="text" ng-model="reporterName" placeholder="Name">
-      <input type="text" ng-model="reporterTitle" placeholder="Title">
-      <input type="number" ng-model="reporterTenure" placeholder="Years On Beat">
-      <input type="text" ng-model="reporterAwards" placeholder="Accolades">
     </div>
     <button type="submit" class="btn btn-sm btn-warning">Submit</button>
   </form>
