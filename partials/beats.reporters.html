@@ -1,5 +1,5 @@
-<div ng-show="beats.reporters.length">
-  <h3>Reporters for {{beats.name}}</h3>
+<div ng-show="beat.reporters.length">
+  <h3>Reporters for {{beat.name}}</h3>
 
   <ul ng-repeat="item in beat.reporters">
     <li>{{item.name}}</li>
@@ -7,7 +7,7 @@
 </div>
 
 <div class="col-md-6">
-  <h3>Add a reporter to {{beats.name}}</h3>
+  <h3>Add a reporter to {{beat.name}}</h3>
   <form ng-submit="addReporter()" class="form-inline">
     <div class="form-group">
       <input type="text" ng-model="reporterName" placeholder="Name">
