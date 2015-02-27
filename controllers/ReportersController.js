@@ -11,8 +11,6 @@ newspaperBeats.controller('ReportersCtrl', function ReportersCtrl($scope, $state
     $scope.reporter.tenure = $scope.reporterTenure;
     $scope.reporter.awards = $scope.reporterAwards;
 
-    // console.log($scope.reporter)
-
     $scope.reporterTitle = null;
     $scope.reporterTenure = null;
     $scope.reporterAwards = null;
