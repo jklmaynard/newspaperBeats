@@ -4,7 +4,7 @@
   <h3>The Beats:</h3>
   <ul>
     <li ng-repeat="item in beats">
-      <a ui-sref="beats.reporters({ beatId: item.id })">{{item.name}}</a>
+      <a ui-sref="beats.reporters({ beatId: item.id })">{{ item.name }}</a>
     </li>
   </ul>
 </div>
@@ -12,7 +12,7 @@
   <div class="col-md-6">
     <form ng-submit="BeatsFactory.addBeat()" class="form-inline">
       <div class="form-group">
-        <input type="text" ng-model="BeatsFactory.beatsName" placeholder="Enter the Beat">
+        <input type="text" ng-model="BeatsFactory.beatName" placeholder="Enter the Beat">
       </div>
       <button type="submit" class="btn btn-sm btn-warning">Post Beat</button>
     </form>
