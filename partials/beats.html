@@ -1,7 +1,7 @@
 <div ui-view>
   <h2>These are the beats of your newspaper</h2>
 <div ng-show="beats.length">
-  <div class="col-md-6">
+  <div class="col-md-12">
     <h3>Search Beats</h3>
     <form class="form-inline" role="form">
       <div>
@@ -11,9 +11,9 @@
   </div>
 </div>
 
-<div>
+<div class="col-md-12">
   <h3 ng-show="beats.length && filtered.length">The Beats:</h3>
-  <!-- <h3 ng-show="beats.length && !filtered.length"> No Results </h3> -->
+  <h3 ng-show="beats.length && !filtered.length"> No Results </h3>
   <ul>
     <li ng-repeat="item in filtered = (beats | filter:query)">
       <a ui-sref="beats.reporters({ beatId: item.id })">{{ item.name }}</a>
@@ -28,7 +28,7 @@
   </ul>
 </div>
 
-  <div class="col-md-6">
+  <div class="col-md-12">
     <form ng-submit="BeatsFactory.addBeat()" class="form-inline">
       <div class="form-group">
         <input type="text" ng-model="BeatsFactory.beatName" placeholder="Enter the Beat">
