@@ -5,4 +5,13 @@ newspaperBeats.config(function($stateProvider) {
     url: "",
     templateUrl: "partials/home.html"
   });
+
+  $stateProvider.state('beats', {
+    url: "/beats",
+    templateUrl: "partials/beats.html",
+    controller: 'BeatsCtrl'
+  });
+
+
+
 });
