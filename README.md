@@ -7,3 +7,5 @@ Although this meets the requirements of the assessment, I still must concede def
 The problem was that, although I could find the id of an individual Reporter object and input new key values, those values came back undefined in JS.  Many different strategies led to the same undefined value.  
 
 I have left this bug up, so that I can talk with folks about it in the weeks to come, and eventually figure out the solution. 
+
+[View site here](http//Jklmaynard.Github.io/newspaperBeats)
