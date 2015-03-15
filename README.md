@@ -8,4 +8,4 @@ The problem was that, although I could find the id of an individual Reporter obj
 
 I have left this bug up, so that I can talk with folks about it in the weeks to come, and eventually figure out the solution. 
 
-[View site here](http//jklmaynard.github.io/newspaperBeats)
+[View site here](http://jklmaynard.github.io/newspaperBeats)
